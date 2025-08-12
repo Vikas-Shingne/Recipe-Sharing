@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: Recipe-sharing
+            expected-sender: ST7Q7DM41E61R537TD36MF509HGVPRDPNFCM324R
+            cost: 12650
+            path: "contracts\\Recipe-sharing.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
